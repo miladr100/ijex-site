@@ -1,6 +1,6 @@
 <!-- Please remove this file from your project -->
 <template>
- <v-toolbar absolute dense flat >
+ <v-toolbar absolute dense flat>
       <v-app-bar-nav-icon v-if="smAndDown"></v-app-bar-nav-icon>
 
       <div v-if="mdAndUp">
@@ -15,6 +15,15 @@
           <v-icon small>{{item.icon}}</v-icon>
         </v-btn>
       </div>
+
+      <div v-if="smAndUp" style="width: 50px"></div>
+
+      <div v-if="smAndUp">
+        <v-btn v-for="icon in languageIcons" :key="icon.language" icon small @click="selectLanguage(icon.language)">
+          <span class="iconify" :data-icon="icon.icon" data-inline="false"></span>
+        </v-btn>
+      </div>
+        
     </v-toolbar>
 </template>
 
@@ -66,6 +75,12 @@ export default {
           href: 'https://www.google.com'
         }
       ],
+      languageIcons: [
+        {icon: "twemoji:flag-for-flag-brazil", language: 'ptBr'},
+        {icon: "emojione-v1:flag-for-united-states", language: 'enUs'},
+        {icon: "emojione-v1:flag-for-spain", language: 'esMx'},
+        {icon: "emojione-v1:flag-for-china", language: 'zhTw'}
+      ]
     }
   },
   computed: {
@@ -79,6 +94,11 @@ export default {
       return this.$vuetify.breakpoint.smAndDown
     }
   },
+  methods: {
+    selectLanguage(language) {
+      console.log(language)
+    }
+  }
 }
 </script>
 
@@ -86,4 +106,5 @@ export default {
   .menu-buttons {
     border-right: 1.5px solid #5bd1ff;
   }
+  .iconify { width: 24px; height: 24px; }
 </style>
