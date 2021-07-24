@@ -1,6 +1,6 @@
 <!-- Please remove this file from your project -->
 <template>
- <v-toolbar absolute dense flat>
+ <v-toolbar absolute dense flat >
       <v-app-bar-nav-icon v-if="smAndDown"></v-app-bar-nav-icon>
 
       <div v-if="mdAndUp">
