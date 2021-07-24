@@ -48,6 +48,9 @@
         </v-row>
       </v-col>
     </v-row>
+    <v-row>
+      <UFlags />
+    </v-row>
   </v-container>
 </template>
 
