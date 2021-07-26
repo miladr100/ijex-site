@@ -1,9 +1,9 @@
 <template>
   <v-app dark>
-    <v-row justify="center" class="my-16">
-      <UToolbar class="mt-12"/>
-      <Nuxt class="mt-10 ml-6"/>
-    </v-row>
+    <div class="d-flex justify-center mt-16">
+      <UToolbar />
+    </div>
+    <Nuxt class="mt-0 ml-6"/>
   </v-app>
 </template>
 
