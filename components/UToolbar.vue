@@ -1,13 +1,13 @@
 <template>
-  <v-card class="overflow-hidden" flat color="white">
+  <v-card v-if="!loadingScreen" class="overflow-hidden" flat color="white">
     <v-app-bar dense flat color="white">
       <v-app-bar-nav-icon v-if="smAndDown" @click="drawerMenu = !drawerMenu"></v-app-bar-nav-icon>
 
       <div v-if="mdAndUp">
-        <v-btn v-for="menu in menus" :key="menu.text" class="menu-buttons" elevation="0" text tile small :to="menu.to">{{getLanguage.menu[menu.text]}}</v-btn>
+        <v-btn v-for="menu in menus" :key="menu.text" class="menu-buttons" elevation="0" text tile small :to="menu.to">{{$t('TOOLBAR.menu')[menu.text]}}</v-btn>
       </div>
       
-      <v-toolbar-title v-if="smAndDown">{{getLanguage.title}}</v-toolbar-title>
+      <v-toolbar-title v-if="smAndDown">{{$t('TOOLBAR.title')}}</v-toolbar-title>
       <div class="mx-md-12 mx-sm-4"></div>
 
       <div v-if="smAndUp">
@@ -18,13 +18,13 @@
 
       <div v-if="smAndUp" style="width: 50px"></div>
 
-      <div v-if="smAndUp">
-        <v-btn v-for="icon in languageIcons" :key="icon.language" icon small @click="selectLanguage(icon.language)">
-          <span class="iconify" :data-icon="icon.icon" data-inline="false"></span>
-        </v-btn>
-      </div>   
+      <v-btn fab dark x-small color="teal" @click="dialog = !dialog">
+        <v-icon small dark>mdi-translate-off</v-icon>
+      </v-btn>   
     </v-app-bar>
+
     <v-navigation-drawer
+      v-if="smAndDown"
       v-model="drawerMenu"
       app
       dark
@@ -37,8 +37,8 @@
           </v-list-item-avatar>
 
           <v-list-item-action @click="goHome()">
-            <v-list-item-title class="text-subtitle-2">{{getLanguage.title_resume}}</v-list-item-title>
-            <!-- <v-list-item-subtitle v-text="getLanguage.title" /> -->
+            <v-list-item-title class="text-subtitle-2">{{$t('TOOLBAR.title_resume')}}</v-list-item-title>
+            <!-- <v-list-item-subtitle v-text="$t('TOOLBAR.title')" /> -->
           </v-list-item-action>
         </v-list-item>
       </v-list>
@@ -52,11 +52,29 @@
           exact
         >
           <v-list-item-action>
-            <v-list-item-title v-text="getLanguage.menu[menu.text]" />
+            <v-list-item-title v-text="$t('TOOLBAR.menu')[menu.text]" />
           </v-list-item-action>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
+
+    <v-dialog
+      v-model="dialog"
+      max-width="220"
+    >
+      <v-card justify="center" align="center">
+        <v-card-title class="text-subtitle-2 text-center">
+          Know another language?
+        </v-card-title>
+
+        <v-card-text v-for="icon in languageIcons" :key="icon.language">
+              <v-btn icon small @click="selectLanguage(icon.language)">
+              <span class="iconify" :data-icon="icon.icon" data-inline="false"></span>
+              <v-card-subtitle>{{icon.iso}}</v-card-subtitle>
+            </v-btn>
+        </v-card-text>
+      </v-card>
+    </v-dialog>
   </v-card>
 </template>
 
@@ -64,53 +82,8 @@
 export default {
   data () {
     return {
+      dialog: false,
       drawerMenu: false,
-      languages: {
-        ptBr: {
-          title: 'Instituto Jovem Exportador',
-          title_resume: 'I. Jovem Exportador',
-          menu: {
-            about_us: 'QUEM SOMOS',
-            our_services: 'NOSSOS SERVIÇOS',
-            blog: 'BLOG',
-            events: 'EVENTOS',
-            contact_us: 'FALE CONOSCO',
-          }
-        },
-        enUs: {
-          title: "Young Exporter Institute",
-          title_resume: 'I. Young Exporter',
-          menu: {
-            about_us: 'ABOUT US',
-            our_services: 'OUR SERVICES',
-            blog: 'BLOG',
-            events: 'EVENTS',
-            contact_us: 'CONTACT US',
-          }
-        },
-        esMx: {
-          title: "Instituto de Jóvenes Exportadores",
-          title_resume: 'I. Jóvenes Exportadores',
-          menu: {
-            about_us: 'QUIENES SOMOS',
-            our_services: 'NUESTROS SERVICIOS',
-            blog: 'BLOG',
-            events: 'EVENTOS',
-            contact_us: 'HABLE CON NOSOTRO',
-          }
-        },
-        zhTw: {
-          title: "青年出口商协会",
-          title_resume: '青年出口商协会',
-          menu: {
-            about_us: '我们是谁',
-            our_services: '我们的服务',
-            blog: '博客',
-            events: '事件',
-            contact_us: '联系我们',
-          }
-        }
-      },
       menus: [
         {
           text: 'about_us',
@@ -156,10 +129,10 @@ export default {
         }
       ],
       languageIcons: [
-        {icon: "twemoji:flag-for-flag-brazil", language: 'ptBr'},
-        {icon: "emojione-v1:flag-for-united-states", language: 'enUs'},
-        {icon: "emojione-v1:flag-for-spain", language: 'esMx'},
-        {icon: "emojione-v1:flag-for-china", language: 'zhTw'}
+        {icon: "twemoji:flag-for-flag-brazil", language: 'pt', iso: 'pt-BR'},
+        {icon: "emojione-v1:flag-for-united-states", language: 'en', iso: 'en-US'},
+        {icon: "emojione-v1:flag-for-spain", language: 'es', iso: 'es-MX'},
+        {icon: "emojione-v1:flag-for-china", language: 'zh', iso: 'zh-TW'}
       ]
     }
   },
@@ -173,13 +146,15 @@ export default {
     smAndDown() {
       return this.$vuetify.breakpoint.smAndDown
     },
-    getLanguage() {
-      return this.languages[this.$store.state.language];
-    }
+    loadingScreen() {
+      return this.$store.getters.getStateLoadingScreen
+    },
   },
   methods: {
     selectLanguage(language) {
-      this.$store.commit("updateLanguage",language);
+      this.$i18n.setLocale(language)
+      this.$store.dispatch('setLoadingScreen', 1000)
+      this.dialog = false
     },
     goHome() {
       this.$router.push('/')

@@ -114,11 +114,31 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    'nuxt-i18n',
   ],
+
+  // Nuxt-I18n module conf: https://i18n.nuxtjs.org/
+  i18n: {
+    locales: [
+      { code: 'en', iso: 'en-US', file: 'en.js' },
+      { code: 'pt', iso: 'pt-BR', file: 'pt.js' },
+      { code: 'es', iso: 'es-MX', file: 'es.js' },
+      { code: 'zh', iso: 'zh-TW', file: 'zh.js'},
+    ],
+    defaultLocale: 'pt',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      onlyOnRoot: true,  // recommended
+    },
+    lazy: true,
+    langDir: 'static/i18n',
+    vueI18n: {
+      fallbackLocale: 'pt',
+    }
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},

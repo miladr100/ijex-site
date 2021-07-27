@@ -8,10 +8,15 @@
 </template>
 
 <script>
+import UToolbar from '~/components/UToolbar';
+
 export default {
+  components: {
+    UToolbar,
+  },
   data () {
     return {
     }
-  }
+  },
 }
 </script>

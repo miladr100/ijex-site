@@ -1,13 +1,20 @@
 
 export const state = () => ({
-    language: 'ptBr',
+    loadingScreen: false,
 })
 
 export const mutations = {
-    updateLanguage: (state, payload) =>
-        (state.language = payload)
+    updateLoadingScreen: (state, payload) =>
+        (state.loadingScreen = payload)
+}
+
+export const actions = {
+    setLoadingScreen({ commit }, loadingTime = 2000) {
+        commit('updateLoadingScreen', true)
+        setTimeout(() => (commit('updateLoadingScreen', false)), loadingTime)
+    }
 }
 
 export const getters = {
-
+    getStateLoadingScreen: (state) => state.loadingScreen,
 }
