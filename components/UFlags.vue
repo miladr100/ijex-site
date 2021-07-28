@@ -1,30 +1,25 @@
 <template>
-  <v-sheet class="mx-auto" elevation="8" max-width="1200">
-    <v-slide-group v-model="model" multiple show-arrows class="pa-4">
+  <v-footer class="mx-auto" absolute padless>
+    <v-slide-group show-arrows class="pa-4">
       <v-slide-item
         v-for="state in states"
         :key="state"
-        v-slot="{ active }"
       >
-          <v-btn
-            :input-value="active"
-            max-height="80"
-            max-width="40"
-            disabled
-
-
-          >
-            <v-img
+        <v-btn
+          max-height="80"
+          max-width="40"
+          disabled
+        >
+          <v-img
             class="ml-8"
             max-height="80"
             max-width="40"
             :src="state"
-
           ></v-img>
-          </v-btn>
+        </v-btn>
       </v-slide-item>
     </v-slide-group>
-  </v-sheet>
+  </v-footer>
 </template>
 
 <script>
@@ -58,6 +53,7 @@ import tocantins from '../static/images/states/tocantins.svg'
 
 export default {
   data: () => ({
+    model: null,
     states: [
       acre,
       alagoas,
@@ -95,5 +91,4 @@ export default {
 .theme--light.v-btn.v-btn--disabled.v-btn--has-bg {
     background-color: transparent !important;
 }
-
 </style>
