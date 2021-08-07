@@ -9,9 +9,13 @@
 				</v-row>
 				<v-row justify="center" align="center" no-gutters>
 					<v-col cols="12" lg="3" md="3" sm="6" xs="6">
-						<UMemberCard :avatarSrc="avatar" :stateSrc="acre" :nameMember="nameMember" :nameState="nameState"/>
+						<UMemberCard :avatarSrc="naruto" :stateSrc="acre" :nameMember="nameMember" :nameState="nameState"/>
 					</v-col>
+          <v-col>
+            <UDescriptionMemberCard :avatarSrc="naruto" role="Programador" :nameMember="nameMember" :phonePrimary="phone1" :phoneSecondary="phone2" :email="email"/>
+          </v-col>
 				</v-row>
+
 			</v-col>
 		</v-row>
 
@@ -25,22 +29,27 @@
 </template>
 
 <script>
-import avatar from '../static/images/states/amazonas.svg'
 import acre from '../static/images/states/acre.svg';
+import naruto from '../static/images/teste/narutin.jpg';
 import UMemberCard from '~/components/UMemberCard';
+import UDescriptionMemberCard from '~/components/UDescriptionMemberCard';
 
 
 
 export default {
   components: {
-    UMemberCard
+    UMemberCard,
+    UDescriptionMemberCard
   },
     data: () => ({
     model: null,
     nameMember: 'Ui Sam',
     nameState: 'Mato Grosso do Sul',
+    phone1: '+55 67 99899 9999',
+    phone2: '+55 67 99899 8888',
+    email: 'uisam@gmail.com',
     acre,
-    avatar
+    naruto,
   }),
 
 }
