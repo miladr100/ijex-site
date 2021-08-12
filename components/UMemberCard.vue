@@ -46,13 +46,11 @@ export default {
       default: '',
       require: true
     },
-
     stateSrc: {
       type: String,
       default: '',
       require: true
     }
   },
-
 }
 </script>
