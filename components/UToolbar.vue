@@ -2,9 +2,36 @@
   <v-card v-if="!loadingScreen" class="overflow-hidden" flat color="white">
     <v-app-bar dense flat color="white">
       <v-app-bar-nav-icon v-if="smAndDown" @click="drawerMenu = !drawerMenu"></v-app-bar-nav-icon>
-
       <div v-if="mdAndUp">
-        <v-btn v-for="menu in menus" :key="menu.text" class="menu-buttons" elevation="0" text tile small :to="menu.to">{{$t('TOOLBAR.menu')[menu.text]}}</v-btn>
+        <v-menu
+          v-for="menu in menus" :key="menu.text"
+          open-on-hover offset-y 
+          transition="slide-x-transition" 
+          bottom 
+          right
+          >
+            <template #activator="{ on, attrs }">
+              <v-btn 
+                v-bind="attrs"
+                class="menu-buttons"
+                elevation="0" 
+                text 
+                tile 
+                small 
+                :to="menu.to" 
+                v-on="on" 
+                >
+                  {{$t('TOOLBAR.menu')[menu.text].title}}
+                </v-btn>
+            </template>
+            <v-list v-if="menu.submenu" dense>
+                <v-list-item v-for="(submenu, index) in menu.submenu" :key="index" router :to="submenu.to">
+                    <v-list-item-action>
+                        <v-list-item-title>{{$t('TOOLBAR.menu')[menu.text].submenu[submenu.text]}}</v-list-item-title>
+                    </v-list-item-action>
+                </v-list-item>
+            </v-list>
+        </v-menu>
       </div>
       
       <v-toolbar-title v-if="smAndDown">{{$t('TOOLBAR.title')}}</v-toolbar-title>
@@ -18,7 +45,7 @@
 
       <div v-if="smAndUp" style="width: 50px"></div>
 
-      <v-btn fab dark x-small color="teal" @click="dialog = !dialog">
+      <v-btn class="ml-4" fab dark x-small color="teal" @click="dialog = !dialog">
         <v-icon small dark>mdi-translate-off</v-icon>
       </v-btn>   
     </v-app-bar>
@@ -44,17 +71,33 @@
       </v-list>
       <v-divider></v-divider>
       <v-list>
-        <v-list-item
-          v-for="(menu, i) in menus"
-          :key="i"
-          :to="menu.to"
-          router
-          exact
-        >
-          <v-list-item-action>
-            <v-list-item-title v-text="$t('TOOLBAR.menu')[menu.text]" />
-          </v-list-item-action>
-        </v-list-item>
+        <div v-for="(menu, i) in menus" :key="i">
+          <v-list-group v-if="menu.submenu" :value="false">
+            <template #activator>
+              <v-list-item-title v-text="$t('TOOLBAR.menu')[menu.text].title" />
+            </template>
+              <v-list-item
+                v-for="(submenu, i) in menu.submenu"
+                :key="i"
+                class="ml-4"
+                :to="submenu.to"
+                link
+              >
+                <v-list-item-title v-text="$t('TOOLBAR.menu')[menu.text].submenu[submenu.text]" />
+              </v-list-item>
+          </v-list-group>
+
+          <v-list-item
+            v-else
+            :to="menu.to"
+            router
+            exact
+          >
+            <v-list-item-action>
+              <v-list-item-title v-text="$t('TOOLBAR.menu')[menu.text].title" />
+            </v-list-item-action>
+          </v-list-item>
+        </div>
       </v-list>
     </v-navigation-drawer>
 
@@ -68,7 +111,7 @@
         </v-card-title>
 
         <v-card-text v-for="icon in languageIcons" :key="icon.language">
-              <v-btn icon small @click="selectLanguage(icon.language)">
+            <v-btn icon small @click="selectLanguage(icon.language)">
               <span class="iconify" :data-icon="icon.icon" data-inline="false"></span>
               <v-card-subtitle>{{icon.iso}}</v-card-subtitle>
             </v-btn>
@@ -86,8 +129,18 @@ export default {
       drawerMenu: false,
       menus: [
         {
-          text: 'about_us',
-          to: '/about'
+          text: 'exporter',
+          to: '',
+          submenu: [
+            {
+              text: 'about_us',
+              to: '/exporter/about',
+            },
+            {
+              text: 'team',
+              to: '/exporter/team',
+            },
+          ],
         },
         {
           text: 'our_services',
@@ -98,8 +151,8 @@ export default {
           to: '/blog'
         },
         {
-          text: 'events',
-          to: '/events'
+          text: 'partners',
+          to: '/partners'
         },
         {
           text: 'contact_us',
@@ -145,6 +198,9 @@ export default {
     },
     smAndDown() {
       return this.$vuetify.breakpoint.smAndDown
+    },
+    xsOnly() {
+      return this.$vuetify.breakpoint.xsOnly
     },
     loadingScreen() {
       return this.$store.getters.getStateLoadingScreen

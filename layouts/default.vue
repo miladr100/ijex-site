@@ -1,22 +1,21 @@
 <template>
-  <v-app dark>
-    <div class="d-flex justify-center mt-16">
-      <UToolbar />
-    </div>
-    <Nuxt class="mt-0 ml-6"/>
-  </v-app>
+	<v-app dark>
+		<div class="d-flex justify-center mt-16">
+			<UToolbar />
+		</div>
+		<Nuxt class="mt-0" />
+	</v-app>
 </template>
 
 <script>
-import UToolbar from '~/components/UToolbar';
+	import UToolbar from '~/components/UToolbar'
 
-export default {
-  components: {
-    UToolbar,
-  },
-  data () {
-    return {
-    }
-  },
-}
+	export default {
+		components: {
+			UToolbar,
+		},
+		data() {
+			return {}
+		},
+	}
 </script>
