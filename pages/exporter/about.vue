@@ -10,6 +10,7 @@
       </v-col>
       <v-col cols="12" lg="8" md="8">
         <v-row justify="center">
+          <v-col  align="center" justify="center" cols="12"><h2>{{$t('ABOUT.general_board')}}</h2></v-col>
           <v-col v-for="member in members" :key="member.name">
             <UMemberCard
               :avatar-src="member.profileImg"
