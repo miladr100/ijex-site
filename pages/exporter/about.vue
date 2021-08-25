@@ -10,12 +10,14 @@
       </v-col>
       <v-col cols="12" lg="8" md="8">
         <v-row justify="center">
+          <v-col  align="center" justify="center" cols="12"><h2>{{$t('ABOUT.general_board')}}</h2></v-col>
           <v-col v-for="member in members" :key="member.name">
             <UMemberCard
-              :avatar-src="member.profileImg" 
-              :state-src="member.stateImg" 
-              :name-member="member.name" 
-              :name-state="member.state"
+              :avatar-src="member.profileImg"
+              :state-src="member.stateImg"
+              :name-member="member.name"
+              :name-state="member.stateAcronym"
+              :member-role="member.role"
             />
           </v-col>
         </v-row>
@@ -24,9 +26,27 @@
 </template>
 
 <script>
+
 import UMemberCard from '~/components/UMemberCard';
-import acre from '~/static/images/states/acre.svg';
-import ronan from '~/static/images/team/ronan_pires.jpg';
+
+
+import adailtonJunior from '~/static/images/directors/adailton_junior.png';
+import alineVergne from '~/static/images/directors/aline-vergne.png';
+import bernhardSmid from '~/static/images/directors/bernhard_smid.png';
+import charmaineAlve from '~/static/images/directors/charmaine_alve.png';
+import danielSantos from '~/static/images/directors/daniel_santos.png';
+import deniseBraga from '~/static/images/directors/denise_braga.png';
+import felipeGuida from '~/static/images/directors/felipe_guida.png';
+import kelianeCristine from '~/static/images/directors/keliane cristine.png';
+import mariaPongue from '~/static/images/directors/maria_pongue.png';
+import ronanPires from '~/static/images/directors/ronan_pires.jpg';
+
+import distritoFederal from '~/static/images/states/distrito_federal_brasil.svg';
+import saoPaulo from '~/static/images/states/sao_paulo.svg';
+import matoGrossoDoSul from '~/static/images/states/mato_grosso_do_sul.svg';
+import rioGrandeDoNorte from '~/static/images/states/rio_grande_do_norte.svg';
+import amazonas from '~/static/images/states/amazonas.svg';
+import bandeiraAngola from '~/static/images/states/flag_of_angola.svg';
 
 export default {
   components: {
@@ -37,34 +57,74 @@ export default {
       members: [
         {
           name: "Ronan Pires",
-          profileImg: ronan,
-          state: "Mato Grosso do Sul",
-          stateImg: acre,
+          profileImg: ronanPires,
+          stateImg: distritoFederal,
+          stateAcronym: 'DF',
+          role: 'president'
         },
         {
-          name: "Ronan Pires",
-          profileImg: ronan,
-          state: "Mato Grosso do Sul",
-          stateImg: acre,
+          name: "Bernhard j. Smid",
+          profileImg: bernhardSmid,
+          stateImg: distritoFederal,
+          stateAcronym: 'DF',
+          role: 'institutional_relations',
         },
         {
-          name: "Ronan Pires",
-          profileImg: ronan,
-          state: "Mato Grosso do Sul",
-          stateImg: acre,
+          name: "Denise Braga",
+          profileImg: deniseBraga,
+          stateImg: saoPaulo,
+          stateAcronym: 'SP',
+          role: 'content_director',
         },
         {
-          name: "Ronan Pires",
-          profileImg: ronan,
-          state: "Mato Grosso do Sul",
-          stateImg: acre,
+          name: "Charmaine Alve",
+          profileImg: charmaineAlve,
+          stateImg: matoGrossoDoSul,
+          stateAcronym: 'MS',
+          role: 'technical_director',
         },
         {
-          name: "Ronan Pires",
-          profileImg: ronan,
-          state: "Mato Grosso do Sul",
-          stateImg: acre,
-        }
+          name: "Felipe Guida Gouveia",
+          profileImg: felipeGuida,
+          stateImg: rioGrandeDoNorte,
+          stateAcronym: 'RN',
+          role: 'ceo',
+        },
+        {
+          name: "Adailton Júnior",
+          profileImg: adailtonJunior,
+          stateImg: distritoFederal,
+          stateAcronym: 'DF',
+          role: 'administrative_financial_director',
+        },
+        {
+          name: "Aline Vergne",
+          profileImg: alineVergne,
+          stateImg: distritoFederal,
+          stateAcronym: 'DF',
+          role: 'legal_board',
+        },
+        {
+          name: "Maria Pongue",
+          profileImg: mariaPongue,
+          stateImg: bandeiraAngola,
+          stateAcronym: 'Angola',
+          role: 'cplp_Board',
+        },
+        {
+          name: "Daniel Santos",
+          profileImg: danielSantos,
+          stateImg: amazonas,
+          stateAcronym: 'AM',
+          role: 'strategic_projects_board',
+        },
+        {
+          name: "Keliane Cristina",
+          profileImg: kelianeCristine,
+          stateImg: distritoFederal,
+          stateAcronym: 'DF',
+          role: 'executive_secretary',
+        },
       ],
     }
   },
