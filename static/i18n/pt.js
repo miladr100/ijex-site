@@ -10,9 +10,9 @@ export default {
       exporter: {
         title: 'JOVEM EXPORTADOR',
         submenu: {
-          about_us: 'QUEM SOMOS',
+          about_us: 'SOBRE NÓS',
           team: 'NOSSO TIME',
-          who: 'SOBRE NÓS',
+          who: 'QUEM SOMOS',
         }
       },
       our_services: {
@@ -41,7 +41,7 @@ export default {
   PARTNERS: {
     title: 'Parceiros',
   },
-  ABOUT: {
+  WHO: {
     card_member: {
       president: 'Presidente',
       institutional_relations: 'Diretor de Relações Institucionais e Governamentais (RIG)',
@@ -53,15 +53,10 @@ export default {
       cplp_Board: 'Diretoria da CPLP',
       strategic_projects_board: 'Diretoria de Projetos Estratégicos e Assuntos Internacionais',
       executive_secretary: 'Secretária Executiva'
-
-
     },
     general_board: 'DIRETORIA GERAL',
-    title_first: 'SOBRE O INSTITUTO',
-    title_second: 'JOVEM EXPORTADOR',
-    text: 'O Instituto Jovem Exportador é uma organização não governamental, sem fins lucrativos, que, através de um programa de inclusão e fomento do desenvolvimento sócio-econômico, atua na sensibilização e capacitação de empresários brasileiros para o comércio  exterior. As ações tem foco nas micro, pequenas e médias empresas e visam promover as exportações e valorizar os produtos e serviços brasileiros para acesso ao mercado intencional.',
   },
-  WHO: {
+  ABOUT: {
     about_title: "SOBRE O JOVEM EXPORTADOR",
     about_description_first: "O Instituto Jovem Exportador é uma organização não governamental, sem fins lucrativos, que, através de um programa de inclusão e fomento do desenvolvimento socioeconômico, atua na sensibilização e capacitação de empresários brasileiros para o comércio exterior.",
     about_description_second: "As ações têm foco nas micro e pequenas empresas e visam promover as exportações e valorizar os produtos e serviços brasileiros para acesso ao mercado intencional.",

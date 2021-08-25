@@ -10,9 +10,9 @@ export default {
       exporter: {
         title: '年轻的出口商',
         submenu: {
-          about_us: '我们是谁',
+          about_us: '關於我們',
           team: '我们的队伍',
-          who: '關於我們',
+          who: '我们是谁',
         }
       },
       our_services: {
@@ -41,7 +41,7 @@ export default {
   PARTNERS: {
     title: '夥伴',
   },
-  ABOUT: {
+  WHO: {
     card_member: {
       president: '總統',
       institutional_relations: '機構和政府關係官員',
@@ -53,15 +53,10 @@ export default {
       cplp_Board: 'CPLP 委員會',
       strategic_projects_board: '戰略項目和國際事務局',
       executive_secretary: '行政秘書'
-
-
     },
     general_board: '董事會',
-    title_first: 'SOBRE O INSTITUTO',
-    title_second: 'JOVEM EXPORTADOR',
-    text: 'O Instituto Jovem Exportador é uma organização não governamental, sem fins lucrativos, que, através de um programa de inclusão e fomento do desenvolvimento sócio-econômico, atua na sensibilização e capacitação de empresários brasileiros para o comércio  exterior. As ações tem foco nas micro, pequenas e médias empresas e visam promover as exportações e valorizar os produtos e serviços brasileiros para acesso ao mercado intencional.',
   },
-  WHO: {
+  ABOUT: {
     about_title: "關於年輕的出口商",
     about_description_first: "青年出口商協會 是一個非政府、非營利組織，通過一項包容和促進社會經濟發展的計劃，致力於提高認識並培訓巴西商人進行外貿。",
     about_description_second: "這些行動的重點是微型和小型公司，旨在促進出口並評估巴西產品和服務的價值，以進入有意的市場。",

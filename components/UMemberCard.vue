@@ -12,7 +12,7 @@
 						<v-list-item-title style="color: black" class="text-h6">
 							{{ nameMember }}
 						</v-list-item-title>
-						<v-list-item-subtitle style="color: black; word-break: break-word; white-space: normal;">{{$t(`ABOUT.card_member.${memberRole}`)}}</v-list-item-subtitle>
+						<v-list-item-subtitle style="color: black; word-break: break-word; white-space: normal;">{{memberRole}}</v-list-item-subtitle>
 					</v-list-item-content>
 				</v-list-item>
 			</v-col>
@@ -51,14 +51,11 @@
 				default: '',
 				require: true,
 			},
-      memberRole: {
-        type: String,
+      		memberRole: {
+        		type: String,
 				default: '',
 				require: true,
-      }
+      		}
 		},
 	}
 </script>
-<style>
-
-</style>
