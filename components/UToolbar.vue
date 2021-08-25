@@ -140,6 +140,10 @@ export default {
               text: 'team',
               to: '/exporter/team',
             },
+            {
+              text: 'who',
+              to: '/exporter/who',
+            },
           ],
         },
         {

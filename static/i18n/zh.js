@@ -12,6 +12,7 @@ export default {
         submenu: {
           about_us: '我们是谁',
           team: '我们的队伍',
+          who: '關於我們',
         }
       },
       our_services: {
@@ -59,5 +60,14 @@ export default {
     title_first: 'SOBRE O INSTITUTO',
     title_second: 'JOVEM EXPORTADOR',
     text: 'O Instituto Jovem Exportador é uma organização não governamental, sem fins lucrativos, que, através de um programa de inclusão e fomento do desenvolvimento sócio-econômico, atua na sensibilização e capacitação de empresários brasileiros para o comércio  exterior. As ações tem foco nas micro, pequenas e médias empresas e visam promover as exportações e valorizar os produtos e serviços brasileiros para acesso ao mercado intencional.',
+  },
+  WHO: {
+    about_title: "關於年輕的出口商",
+    about_description_first: "青年出口商協會 是一個非政府、非營利組織，通過一項包容和促進社會經濟發展的計劃，致力於提高認識並培訓巴西商人進行外貿。",
+    about_description_second: "這些行動的重點是微型和小型公司，旨在促進出口並評估巴西產品和服務的價值，以進入有意的市場。",
+    vision_title: "我們的願景",
+    vision_description: "被企業家、企業家和投資者在國內和國際上認可為小微企業包容、連接和進入新市場的主要平台。",
+    mission_title: "我們的任務",
+    mission_description: "促進向年輕企業家和企業家傳播商業國際化文化，發展技能並將他們與新市場聯繫起來。",
   }
 }

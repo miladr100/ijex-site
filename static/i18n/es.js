@@ -12,6 +12,7 @@ export default {
         submenu: {
           about_us: 'QUIENES SOMOS',
           team: 'NUESTRO EQUIPO',
+          who: 'SOBRE NOSOTROS',
         }
       },
       our_services: {
@@ -60,5 +61,14 @@ export default {
     title_first: 'SOBRE O INSTITUTO',
     title_second: 'JOVEM EXPORTADOR',
     text: 'O Instituto Jovem Exportador é uma organização não governamental, sem fins lucrativos, que, através de um programa de inclusão e fomento do desenvolvimento sócio-econômico, atua na sensibilização e capacitação de empresários brasileiros para o comércio  exterior. As ações tem foco nas micro, pequenas e médias empresas e visam promover as exportações e valorizar os produtos e serviços brasileiros para acesso ao mercado intencional.',
+  },
+  WHO: {
+    about_title: "ACERCA DEL JOVEN EXPORTADOR",
+    about_description_first: "El Instituto Jovem Exportador es una organización no gubernamental sin fines de lucro que, a través de un programa de inclusión y promoción del desarrollo socioeconómico, trabaja para sensibilizar y capacitar a empresarios brasileños para el comercio exterior.",
+    about_description_second: "Las acciones están enfocadas a las micro y pequeñas empresas y tienen como objetivo promover las exportaciones y valorizar los productos y servicios brasileños para el acceso al mercado intencional.",
+    vision_title: "NUESTRA VISIÓN",
+    vision_description: "Ser reconocidos a nivel nacional e internacional por emprendedores, emprendedores e inversionistas como la principal plataforma de inclusión, conexión y acceso de las micro y pequeñas empresas a nuevos mercados.",
+    mission_title: "NUESTRA MISIÓN",
+    mission_description: "Promover la difusión de una cultura de internacionalización empresarial para jóvenes emprendedores y emprendedores, desarrollando habilidades y conectándolos con nuevos mercados.",
   }
 }
