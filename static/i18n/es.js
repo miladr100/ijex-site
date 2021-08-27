@@ -11,7 +11,7 @@ export default {
         title: 'JÓVENES EXPORTADORES',
         submenu: {
           about_us: 'SOBRE NOSOTROS',
-          team: 'NUESTRO EQUIPO',
+          team: 'NUESTROS NUCLEOS',
           who: 'QUIENES SOMOS',
         }
       },

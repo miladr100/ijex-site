@@ -11,7 +11,7 @@ export default {
         title: 'YOUNG EXPORTER',
         submenu: {
           about_us: 'ABOUT US', 
-          team: 'OUR TEAM',
+          team: 'OUR CENTERS',
           who: 'WHO WE ARE',
         }
       },

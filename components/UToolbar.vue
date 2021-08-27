@@ -137,12 +137,12 @@ export default {
               to: '/exporter/about',
             },
             {
-              text: 'team',
-              to: '/exporter/team',
-            },
-            {
               text: 'who',
               to: '/exporter/who',
+            },
+            {
+              text: 'team',
+              to: '/exporter/team',
             },
           ],
         },
@@ -166,23 +166,23 @@ export default {
       items: [
         {
           icon: 'mdi-facebook',
-          href: 'https://www.google.com'
+          href: 'https://www.facebook.com/jovemexportador'
         },
         {
           icon: 'mdi-twitter',
-          href: 'https://www.google.com'
+          href: 'https://twitter.com/JExportador'
         },
         {
           icon: 'mdi-youtube',
-          href: 'https://www.google.com'
+          href: 'https://www.youtube.com/channel/UCdzc-glhEztoKQvfRn-gPgw'
         },
         {
           icon: 'mdi-instagram',
-          href: 'https://www.google.com'
+          href: 'https://www.instagram.com/jovemexportador/'
         },
         {
           icon: 'mdi-linkedin',
-          href: 'https://www.google.com'
+          href: 'https://www.linkedin.com/company/jovemexportador/'
         }
       ],
       languageIcons: [

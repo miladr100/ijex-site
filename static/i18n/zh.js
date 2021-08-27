@@ -11,7 +11,7 @@ export default {
         title: '年轻的出口商',
         submenu: {
           about_us: '關於我們',
-          team: '我们的队伍',
+          team: '我们的中心',
           who: '我们是谁',
         }
       },

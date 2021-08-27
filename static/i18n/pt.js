@@ -11,7 +11,7 @@ export default {
         title: 'JOVEM EXPORTADOR',
         submenu: {
           about_us: 'SOBRE NÓS',
-          team: 'NOSSO TIME',
+          team: 'NOSSOS NÚCLEOS',
           who: 'QUEM SOMOS',
         }
       },
