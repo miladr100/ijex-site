@@ -11,7 +11,7 @@
 					<v-card-title class="text-h5 font-weight-medium" style="color: #194f34; text-transform: uppercase;">{{$t('PARTNERS.title')}}</v-card-title>
 				</v-row>
 				<v-row justify="center" align="center" no-gutters>
-					<v-col cols="12" lg="3" md="3" sm="6" xs="6" v-for="partner in partners" :key="partner">
+					<v-col v-for="partner in partners" :key="partner" cols="12" lg="3" md="3" sm="6" xs="6">
 						<v-card tile elevation="0">
 							<v-img v-if="xsOnly" class="mx-16 my-8" :src="partner"></v-img>
 							<v-img v-else class="mx-11" :src="partner"></v-img>
@@ -62,15 +62,11 @@
 				peiex,
 				sebrae,
 				senac,
-
 				sedesc,
-
 				jci,
-
 				suframa,
 				idesam,
 				sidectiAmazonas,
-
 				ifmsLogo,
 			],
 		}),
@@ -83,7 +79,7 @@
 			},
 		},
 		mounted() {
-			this.$store.dispatch('setLoadingScreen', 2000)
+			this.$store.dispatch('setLoadingScreen', 1000)
 		},
 	}
 </script>
