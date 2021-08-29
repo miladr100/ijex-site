@@ -65,5 +65,31 @@ export default {
     vision_description: "Ser reconocidos a nivel nacional e internacional por emprendedores, emprendedores e inversionistas como la principal plataforma de inclusión, conexión y acceso de las micro y pequeñas empresas a nuevos mercados.",
     mission_title: "NUESTRA MISIÓN",
     mission_description: "Promover la difusión de una cultura de internacionalización empresarial para jóvenes emprendedores y emprendedores, desarrollando habilidades y conectándolos con nuevos mercados.",
+  },
+  SERVICES: {
+    content: {
+      title: 'Generación de contenido',
+      text: 'Además de producir contenido escrito, el Instituto Jovem Exportador promueve constantemente talleres, foros, clases magistrales y cursos que brindan información valiosa sobre el emprendimiento y la internacionalización empresarial. Es en este entorno altamente interactivo donde la red de jóvenes empresas exportadoras amplía su visión de la realidad y las tendencias del entorno empresarial internacional. ',
+    },
+    facilities: {
+      title: 'Facilitación',
+      text: 'Trabajamos para estimular las relaciones comerciales y crear oportunidades de negocio, promoviendo la interacción de emprendedores y emprendedores de diferentes áreas de actividad a través del intercambio de experiencias y mejores prácticas. Para ello, impulsamos diversas actividades como encuentros de networking y misiones internacionales, entre otros. ',
+    },
+    sectors: {
+      title: 'Enfoque de los sectores público y privado',
+      text: 'Somos uma entidade empresarial em que todos os setores da economia estão representados, e que encaminha demandas, propostas e sugestões às autoridades públicas, visando promover um melhor ambiente de negócios, bem como fortalecer a agenda ligada ao comércio e investimentos entre Brasil e el mundo.',
+    },
+    connections: {
+      title: 'Conexiones internacionales',
+      text: 'El Instituto Jovem Exportador conecta a emprendedores con nuevas oportunidades de mercado, conectándolos con potenciales inversionistas y creando un entorno internacional para validar ideas, contando siempre con el apoyo de especialistas del mercado internacional y, sobre todo, apoyándose en los desafíos de desarrollo de su negocio en un entorno internacional. ',
+    },
+    education: {
+      title: 'Desarrollo de Proyectos en Educación Emprendedora, Técnica y Vocacional',
+      text: 'Desarrollamos proyectos de formación empresarial en todo el país a través de la articulación de alianzas estratégicas con departamentos gubernamentales, empresas privadas, organizaciones, fundaciones e iniciativas. Abordamos temas como el fortalecimiento de la educación emprendedora para la internacionalización de la micro y pequeña empresa, la educación técnica y profesional y la asistencia en la implementación de políticas públicas enfocadas al sector productivo.',
+    },
+    missions: {
+      title: 'Organización de misiones comerciales',
+      text: 'Organización de delegación de jóvenes emprendedores brasileños para sumergirse en otros países, con objetivos de aprendizaje y agendas comerciales. Las agendas comerciales se elaboran con el apoyo de expertos locales, buscando aprovechar mejor las oportunidades reales de negocio',
+    }
   }
 }

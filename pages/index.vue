@@ -14,13 +14,13 @@
       <v-row :justify="getJustify">
         <v-col v-if="mdAndUp" cols="2">
           <v-row>
-            <v-col cols="12">
+            <v-col cols="12" class="mt-4">
               <v-img
-                max-width="150"
-                :src="require(`~/static/images/logo_programa.png`)"
+                max-width="120"
+                :src="require(`~/static/images/logo_programa_texto.png`)"
               ></v-img>
             </v-col>
-            <v-col cols="12">
+            <v-col cols="12" class="mt-n4">
               <v-card
                 elevation="0"
                 tile

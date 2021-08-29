@@ -1,5 +1,13 @@
 <template>
-  <v-card v-if="!loadingScreen" class="overflow-hidden" flat color="white">
+  <v-card v-if="!loadingScreen" class="d-flex flex-row overflow-hidden" flat color="white">
+    <NuxtLink to="/">
+      <v-img
+        v-if="mdAndUp"
+        class=""
+        max-width="50"
+        :src="logoSimbolo"
+      ></v-img>
+    </NuxtLink>
     <v-app-bar dense flat color="white">
       <v-app-bar-nav-icon v-if="smAndDown" @click="drawerMenu = !drawerMenu"></v-app-bar-nav-icon>
       <div v-if="mdAndUp">
@@ -122,9 +130,12 @@
 </template>
 
 <script>
+import logoSimbolo from '../static/images/logo_simbolo_programa.png'
+
 export default {
   data () {
     return {
+      logoSimbolo,
       dialog: false,
       drawerMenu: false,
       menus: [

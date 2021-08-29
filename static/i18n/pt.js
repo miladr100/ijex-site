@@ -64,5 +64,31 @@ export default {
     vision_description: "Sermos reconhecidos em nível nacional e internacional por empresários, empreendedores e investidores como a principal plataforma de inclusão, conexão e acesso de micro e pequenos negócios a novos mercados.",
     mission_title: "NOSSA MISSÃO",
     mission_description: "Promover a difusão da cultura de internacionalização de negócios para jovens empresários e empreendedores, desenvolvendo competências e conectando-os com novos mercados.",
+  },
+  SERVICES: {
+    content: { 
+      title: 'Geração de Conteúdo',
+      text: 'Além da produção de conteúdo escrito, o Instituto Jovem Exportador constantemente promove workshops, fóruns, master classes e cursos que fornecem valiosas  informações sobre empreendedorismo e internacionalização de negócios. É nesse ambiente altamente interativo que a rede de jovens empresas exportadoras ampliam a sua visão sobre a realidade e as tendências do ambiente internacional para negócios.',
+    },
+    facilities: { 
+      title: 'Facilitação',
+      text: 'Trabalhamos para estimular o relacionamento empresarial e criar oportunidades de negócios, promovendo a interação de empresários e empreendedores de diversas áreas de atuação através de trocas de experiências e de melhores práticas. Para isso, promovemos diversas atividades como encontros de networking e missões internacionais, entre outras.',
+    },
+    sectors: {
+      title: 'Aproximação do Setor Público e Privado',
+      text: 'Somos uma entidade empresarial em que todos os setores da economia estão representados, e que encaminha demandas, propostas e sugestões às autoridades públicas, visando promover um melhor ambiente de negócios, bem como fortalecer a agenda ligada ao comércio e investimentos entre Brasil e o mundo.',
+    },
+    connections: {
+      title: 'Conexões Internacionais',
+      text: 'O Instituto Jovem Exportador conecta o empreendedor a novas oportunidades de mercado conectando-o a potenciais investidores e criando um ambiente internacional para validar ideias, sempre contando com o apoio de especialistas do mercado internacional e, sobretudo, sendo apoiado nos desafios do desenvolvimento de seu negócio em ambiente internacional.',
+    },
+    education: {
+      title: 'Desenvolvimento de Projetos em Educação Empreendedora, Técnica e Profissionalizante',
+      text: 'Desenvolvemos projetos de capacitação empreendedora em todo o país através da articulação de parcerias estratégicas com secretarias de governos, empresas privadas, organizações, fundações e iniciativas. Abordamos temas como fortalecimento da educação empreendedora para internacionalização de micro e pequenos negócios, educação técnica, profissional e assessoria na implementação de políticas públicas com foco no setor produtivo.'
+    },
+    missions: {
+      title: 'Organização de Missões Empresariais',
+      text: 'Organização de delegação de jovens empresários brasileiros para imersão em outros países, com objetivos aprendizado e de agendas comerciais. São elaboradas agendas comerciais com apoio de especialistas locais, buscando melhor aproveitamento das reais oportunidades de negócios.'
+    }
   }
 }
