@@ -90,5 +90,21 @@ export default {
       title: 'Organização de Missões Empresariais',
       text: 'Organização de delegação de jovens empresários brasileiros para imersão em outros países, com objetivos aprendizado e de agendas comerciais. São elaboradas agendas comerciais com apoio de especialistas locais, buscando melhor aproveitamento das reais oportunidades de negócios.'
     }
+  },
+  CORE: {
+    title: 'NOSSOS NÚCLEOS',
+    subtitle: 'O IJEx está presente em todas as regiões do Brasil:',
+
+    member: {
+      role: "Coordenador Nacional"
+    },
+    regions: {
+      north: 'Região Norte',
+      northeast: 'Região Nordeste',
+      southeast: 'Região Sudeste',
+      midwest: 'Região Centro Oeste',
+      south: 'Região Sul',
+    },
+    view_more: 'Clique para ver mais.'
   }
 }

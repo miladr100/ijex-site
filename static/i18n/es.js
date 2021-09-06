@@ -91,5 +91,20 @@ export default {
       title: 'Organización de misiones comerciales',
       text: 'Organización de delegación de jóvenes emprendedores brasileños para sumergirse en otros países, con objetivos de aprendizaje y agendas comerciales. Las agendas comerciales se elaboran con el apoyo de expertos locales, buscando aprovechar mejor las oportunidades reales de negocio',
     }
+  },
+  CORE: {
+    title: 'NUESTRO NUCLEO',
+    subtitle: 'IJEx está presente en todas las regiones de Brasil:',
+    member: {
+      role: "Coordinadora Nacional"
+    },
+    regions: {
+      north: 'Región Norte',
+      northeast: 'Región Nordeste',
+      southeast: 'Región Sureste',
+      midwest: 'Región Centro Oeste',
+      south: 'Región Sur',
+    },
+    view_more: 'Haga clic para ver más.'
   }
 }

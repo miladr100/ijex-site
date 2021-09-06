@@ -90,5 +90,20 @@ export default {
       title: '組織商業使命',
       text: '組織巴西年輕企業家代表團，讓他們沉浸在其他國家，制定學習目標和商業議程。商業議程是在當地專家的支持下準備的，旨在更好地利用真正的商業機會。'
     }
+  },
+  CORE: {
+    title: '我們的核心',
+    subtitle: 'IJEx 存在於巴西的所有地區：',
+    member: {
+      role: "國家協調員l"
+    },
+    regions: {
+      north: '北部地區',
+      northeast: '東北地區',
+      southeast: '東南地區',
+      midwest: '中西部地區',
+      south: '南部地區',
+    },
+    view_more: '點擊查看更多'
   }
 }

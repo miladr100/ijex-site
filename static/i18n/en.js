@@ -90,5 +90,21 @@ export default {
       title: 'Organization of Business Missions',
       text: 'Organization of delegation of young Brazilian entrepreneurs to immerse themselves in other countries, with learning objectives and commercial agendas. Commercial agendas are prepared with the support of local experts, seeking to better take advantage of real business opportunities.'
     }
+  },
+  CORE: {
+    title: 'OUR NUCLEUS',
+    subtitle: 'The IJEx is present in all regions of Brazil:',
+
+    member: {
+      role: "National Coordinator"
+    },
+    regions: {
+      north: 'North Region',
+      northeast: 'Northeast Region',
+      southeast: 'Southeast Region',
+      midwest: 'Midwest Region',
+      south: 'South Region',
+    },
+    view_more: 'Click to see more.'
   }
 }
