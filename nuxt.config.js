@@ -133,11 +133,12 @@ export default {
       cookieKey: 'i18n_redirected',
       onlyOnRoot: true,  // recommended
     },
-    lazy: true,
+    skipSettingLocaleOnNavigate: true,
+    // lazy: true,
     langDir: 'static/i18n',
-    vueI18n: {
-      fallbackLocale: 'pt',
-    }
+    // vueI18n: {
+    //   fallbackLocale: 'pt',
+    // }
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

@@ -10,10 +10,11 @@
           <v-col v-for="member in members" :key="member.name">
             <UMemberCard
               :avatar-src="member.profileImg"
-              :state-src="member.stateImg"
+              :state-img="member.stateImg"
               :name-member="member.name"
               :name-state="member.stateAcronym"
               :member-role="$t(`WHO.card_member.${member.role}`)"
+              :position="member.position"
             />
           </v-col>
         </v-row>
@@ -55,7 +56,8 @@ export default {
           profileImg: ronanPires,
           stateImg: distritoFederal,
           stateAcronym: 'DF',
-          role: 'president'
+          role: 'president',
+          position: 'bottom'
         },
         {
           name: "Bernhard j. Smid",
@@ -63,6 +65,8 @@ export default {
           stateImg: distritoFederal,
           stateAcronym: 'DF',
           role: 'institutional_relations',
+          position: 'bottom'
+
         },
         {
           name: "Denise Braga",
@@ -70,6 +74,8 @@ export default {
           stateImg: saoPaulo,
           stateAcronym: 'SP',
           role: 'content_director',
+          position: 'bottom'
+
         },
         {
           name: "Charmaine Alve",
@@ -77,6 +83,8 @@ export default {
           stateImg: matoGrossoDoSul,
           stateAcronym: 'MS',
           role: 'technical_director',
+          position: 'bottom'
+
         },
         {
           name: "Felipe Guida Gouveia",
@@ -84,6 +92,8 @@ export default {
           stateImg: rioGrandeDoNorte,
           stateAcronym: 'RN',
           role: 'ceo',
+          position: 'bottom'
+
         },
         {
           name: "Adailton Júnior",
@@ -91,6 +101,8 @@ export default {
           stateImg: distritoFederal,
           stateAcronym: 'DF',
           role: 'administrative_financial_director',
+          position: 'bottom'
+
         },
         {
           name: "Aline Vergne",
@@ -98,6 +110,8 @@ export default {
           stateImg: distritoFederal,
           stateAcronym: 'DF',
           role: 'legal_board',
+          position: 'bottom'
+
         },
         {
           name: "Maria Pongue",
@@ -105,6 +119,8 @@ export default {
           stateImg: bandeiraAngola,
           stateAcronym: 'Angola',
           role: 'cplp_Board',
+          position: 'bottom'
+
         },
         {
           name: "Daniel Santos",
@@ -112,6 +128,8 @@ export default {
           stateImg: amazonas,
           stateAcronym: 'AM',
           role: 'strategic_projects_board',
+          position: 'bottom'
+
         },
         {
           name: "Keliane Cristina",
@@ -119,6 +137,8 @@ export default {
           stateImg: distritoFederal,
           stateAcronym: 'DF',
           role: 'executive_secretary',
+          position: 'bottom'
+
         },
       ],
     }
@@ -141,7 +161,7 @@ export default {
     },
   },
   mounted() {
-    this.$store.dispatch('setLoadingScreen', 1000)
+    this.$store.dispatch('setLoadingScreen', 350)
   },
 }
 </script>

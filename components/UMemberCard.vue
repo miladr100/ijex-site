@@ -2,6 +2,9 @@
 	<v-card align="center" elevation="0" >
 		<v-row align="center">
 			<v-col align-self="start" cols="12">
+				<h3 v-if="position == 'top'">{{ memberRole }}</h3>
+			</v-col>
+			<v-col align-self="start" cols="12">
 				<v-avatar class="profile" size="150">
 					<v-img :src="avatarSrc"></v-img>
 				</v-avatar>
@@ -12,13 +15,13 @@
 						<v-list-item-title style="color: black" class="text-h6">
 							{{ nameMember }}
 						</v-list-item-title>
-						<v-list-item-subtitle style="color: black; word-break: break-word; white-space: normal;">{{memberRole}}</v-list-item-subtitle>
+						<v-list-item-subtitle v-if="position == 'bottom'" style="color: black; word-break: break-word; white-space: normal;">{{memberRole}}</v-list-item-subtitle>
 					</v-list-item-content>
 				</v-list-item>
 			</v-col>
 			<v-row>
-				<v-col cols="12">
-					<v-img max-height="80" max-width="40" :src="stateSrc"></v-img>
+				<v-col v-if="stateImg" cols="12">
+					<v-img max-height="80" max-width="40" :src="stateImg"></v-img>
 				</v-col>
 				<v-col>
 					<h3>{{ nameState }}</h3>
@@ -46,12 +49,17 @@
 				default: '',
 				require: true,
 			},
-			stateSrc: {
+			stateImg: {
 				type: String,
 				default: '',
-				require: true,
+				require: false,
 			},
       		memberRole: {
+        		type: String,
+				default: '',
+				require: true,
+      		},
+			position: {
         		type: String,
 				default: '',
 				require: true,
