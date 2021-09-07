@@ -85,7 +85,7 @@ export default {
     },
   },
   mounted() {
-    this.$store.dispatch('setLoadingScreen',2000)
+    this.$store.dispatch('setLoadingScreen', 500)
   },
 }
 </script>

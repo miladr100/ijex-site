@@ -161,7 +161,7 @@ export default {
     },
   },
   mounted() {
-    this.$store.dispatch('setLoadingScreen', 1000)
+    this.$store.dispatch('setLoadingScreen', 350)
   },
 }
 </script>
