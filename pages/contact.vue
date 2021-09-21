@@ -1,23 +1,23 @@
 <template>
-    <v-row justify="center" align="center">
-        <v-card class="overflow-hidden mb-12" flat color="white">
-          <div class="d-flex flex-column align-center">
-            <v-img
-              max-width="250"
-              :src="require(`~/static/images/logo_programa.png`)"
-            ></v-img>
-            <v-card-title>{{$t('GENERAL.in_construction')}}</v-card-title>
-            <v-card-subtitle>{{$t('GENERAL.in_construction_subtitle')}}</v-card-subtitle>
-          </div>
-        </v-card>
-    </v-row>
+  <UContact
+    :name-rule-required="$t('CONTACT.component.validators.nameRequired')"
+    :email-rule-required="$t('CONTACT.component.validators.emailRequired')"
+    :email-rule-not-valid="$t('CONTACT.component.validators.emailValid')"
+    :message-rule-required="$t('CONTACT.component.validators.mensagemRequired')"
+    :message-rule-small="$t('CONTACT.component.validators.mensagemValid')"
+   />
 </template>
 
 <script>
+import UContact from '~/components/UContact'
+
 export default {
-  data () {
-    return {
-    }
-  }
-}
+
+  components: {
+    UContact
+  },
+  name: "Contact",
+  data: () => ({
+  })
+};
 </script>

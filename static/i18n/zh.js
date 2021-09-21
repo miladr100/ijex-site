@@ -105,5 +105,24 @@ export default {
       south: '南部地區',
     },
     view_more: '點擊查看更多'
+  },
+  CONTACT:{
+    title: '聯繫我們',
+    component: {
+      name: '姓名',
+      email: 'E-mail',
+      messege: '信息',
+      validators:{
+        nameRequired: '姓名是必填項',
+        emailRequired: '電子郵件是必需的',
+        emailValid: '電子郵件必須有效',
+        mensagemRequired: '消息是強制性的',
+        mensagemValid: '消息長度必須超過 10 個字符'
+      },
+      buttons: {
+        submit: '發送',
+        reset: '刪除',
+      }
+    }
   }
 }

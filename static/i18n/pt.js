@@ -106,5 +106,24 @@ export default {
       south: 'Região Sul',
     },
     view_more: 'Clique para ver mais.'
+  },
+  CONTACT:{
+    title: 'Fale Conosco',
+    component: {
+      name: 'Nome',
+      email: 'E-mail',
+      messege: 'Mensagem',
+      validators:{
+        nameRequired: 'Nome é obrigatório',
+        emailRequired: 'E-mail é obrigatório',
+        emailValid: 'E-mail deve ser válido',
+        mensagemRequired: 'Mensagem é obrigatório',
+        mensagemValid: 'Mensagem deve ter mais de 10 caracteres'
+      },
+      buttons: {
+        submit: 'Enviar',
+        reset: 'Apagar',
+      }
+    }
   }
 }

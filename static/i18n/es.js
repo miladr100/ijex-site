@@ -106,5 +106,24 @@ export default {
       south: 'Región Sur',
     },
     view_more: 'Haga clic para ver más.'
+  },
+  CONTACT:{
+    title: 'Hable Con Nosotros',
+    component: {
+      name: 'Nombre',
+      email: 'E-mail',
+      messege: 'Mensaje',
+      validators:{
+        nameRequired: 'Nombre es requerido',
+        emailRequired: 'E-mail es requerido',
+        emailValid: 'E-mail debe ser válido',
+        mensagemRequired: 'Mensaje es requerido',
+        mensagemValid: 'El mensaje debe tener más de 10 caracteres'
+      },
+      buttons: {
+        submit: 'Mandar',
+        reset: 'Borrar',
+      }
+    }
   }
 }

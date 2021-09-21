@@ -106,5 +106,25 @@ export default {
       south: 'South Region',
     },
     view_more: 'Click to see more.'
+  },
+  CONTACT:{
+    title: 'Contact Us',
+    component: {
+      name: 'Name',
+      email: 'E-mail',
+      messege: 'Message',
+      validators:{
+        nameRequired: 'Name is required',
+        emailRequired: 'E-mail is required',
+        emailValid: 'E-mail must be valid',
+        mensagemRequired: 'Message is required',
+        mensagemValid: 'Message must be longer than 10 characters'
+      },
+      buttons: {
+        submit: 'Submit',
+        reset: 'Reset',
+      }
+    }
   }
+  
 }
