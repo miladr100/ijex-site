@@ -109,20 +109,38 @@ export default {
   },
   CONTACT:{
     title: 'Hable Con Nosotros',
+    subtitle: 'No dude en solicitar más detalles, ¡no guarde ninguna pregunta!!',
     component: {
-      name: 'Nombre',
-      email: 'E-mail',
-      messege: 'Mensaje',
       validators:{
         nameRequired: 'Nombre es requerido',
         emailRequired: 'E-mail es requerido',
         emailValid: 'E-mail debe ser válido',
-        mensagemRequired: 'Mensaje es requerido',
-        mensagemValid: 'El mensaje debe tener más de 10 caracteres'
+        messageRequired: 'Mensaje es requerido',
+        messageValid: 'El mensaje debe tener más de 10 caracteres',
+        subjectRequired: 'El tema es requerido',
+      },
+      labels: {
+        name: 'Nombre',
+        email: 'E-mail',
+        subject: 'Tema',
+        message: 'Mensaje',
       },
       buttons: {
         submit: 'Mandar',
         reset: 'Borrar',
+      },
+      our_address: {
+        title: 'Nosso Dirección',
+        address: 'Dirección',
+        phone: 'Teléfono'
+      },
+      business_hours: {
+        title: 'Horario Comercial',
+        days_hours: 'Lunes – Viernes – 9am a 6pm'
+      },
+      get_in_touch: {
+        title: 'Entrar en Contacto',
+        text: 'Nuestro equipo está capacitado para atender sus solicitudes, contáctenos por formulario o teléfono o correo electrónico o visítenos en nuestra dirección.'
       }
     }
   }
