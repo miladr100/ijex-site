@@ -1,5 +1,5 @@
 <template>
-  <v-row align="center" class="d-flex justify-center">
+  <v-row justify="center" class="d-flex justify-center">
     <v-col cols="md-6" class="d-flex justify-end">
       <v-col cols="md-8" class="lighten-5 mb-6">
         <div class="staticHero">
@@ -35,7 +35,7 @@
                 required
               ></v-text-field>
               <v-text-field
-                v-model="email"
+                v-model="subject"
                 :rules="subjectRules"
                 :label="$t('CONTACT.component.labels.subject')"
                 required
@@ -61,10 +61,11 @@
         </div>
       </v-col>
     </v-col>
+
     <v-col cols="md-6">
       <v-row>
         <v-col cols="md-8 sm-4">
-          <v-card-title class="text-h5" style="color: #194f34">
+          <v-card-title class="text-h5 font-weight-bold mb-2 headline" style="color: #194f34">
             {{ $t('CONTACT.component.our_address.title') }}
           </v-card-title>
           <v-row>
@@ -130,6 +131,13 @@
         </v-col>
       </v-row>
     </v-col>
+
+    <v-snackbar
+      v-model="snackbar"
+      timeout="3000"
+    >
+      Message sent successfully!
+    </v-snackbar>
   </v-row>
 </template>
 
@@ -182,12 +190,14 @@ export default {
       (v) => !!v || (instance.messageRuleRequired ?? ''),
       (v) => (v && v.length >= 10) || (instance.messageRuleSmall ?? ''),
     ],
+    subject: '',
     subjectRules: [(v) => !!v || (instance.subjectRuleRequired ?? '')],
   }),
   methods: {
     validate() {
       if (this.$refs.form.validate()) {
         this.snackbar = true
+        this.reset()
       }
     },
     reset() {
