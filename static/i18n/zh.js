@@ -105,5 +105,42 @@ export default {
       south: '南部地區',
     },
     view_more: '點擊查看更多'
+  },
+  CONTACT:{
+    title: '聯繫我們',
+    subtitle: '隨意詢問詳情，不要保存任何問題！!',
+    component: {
+      validators:{
+        nameRequired: '姓名是必填項',
+        emailRequired: '電子郵件是必需的',
+        emailValid: '電子郵件必須有效',
+        messageRequired: '消息是強制性的',
+        messageValid: '消息長度必須超過 10 個字符',
+        subjectRequired: '主題是必填項',
+      },
+      labels: {
+        name: '姓名',
+        email: 'E-mail',
+        subject: '主題',
+        message: '信息',
+      },
+      buttons: {
+        submit: '發送',
+        reset: '刪除',
+      },
+      our_address: {
+        title: '我們的地址',
+        address: '地址',
+        phone: '電話'
+      },
+      business_hours: {
+        title: '營業時間',
+        days_hours: '週一 – 星期五 – 上午 9 點至下午 6 點'
+      },
+      get_in_touch: {
+        title: '保持聯繫',
+        text: '我們的團隊能夠滿足您的要求，通過表格、電話或電子郵件與我們聯繫，或訪問我們的地址.'
+      }
+    }
   }
 }

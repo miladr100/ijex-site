@@ -106,5 +106,44 @@ export default {
       south: 'South Region',
     },
     view_more: 'Click to see more.'
+  },
+  CONTACT:{
+    title: 'Contact Us',
+    subtitle: "Feel free to ask for details, don't save any questions!",
+    component: {
+
+      validators:{
+        nameRequired: 'Name is required',
+        emailRequired: 'E-mail is required',
+        emailValid: 'E-mail must be valid',
+        messageRequired: 'Message is required',
+        messageValid: 'Message must be longer than 10 characters',
+        subjectRequired: 'Subject is required',
+      },
+      labels: {
+        name: 'Name',
+        email: 'E-mail',
+        subject: 'Subject',
+        message: 'Message',
+      },
+      buttons: {
+        submit: 'Submit',
+        reset: 'Reset',
+      },
+      our_address: {
+        title: 'Our address',
+        address: 'Address',
+        phone: 'Phone Number'
+      },
+      business_hours: {
+        title: 'Business Hours',
+        days_hours: 'Monday – Friday – 9am to 6pm'
+      },
+      get_in_touch: {
+        title: 'Get in Touch',
+        text: 'Our team is able to meet your requests, contact us by form or phone or email or pay us a visit at our address.'
+      }
+    }
   }
+  
 }

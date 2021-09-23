@@ -106,5 +106,43 @@ export default {
       south: 'Região Sul',
     },
     view_more: 'Clique para ver mais.'
+  },
+  CONTACT:{
+    title: 'Fale Conosco',
+    subtitle: 'Sinta-se livre para pedir detalhes, não salve nenhuma pergunta!',
+    component: {
+      validators:{
+        nameRequired: 'Nome é obrigatório',
+        emailRequired: 'E-mail é obrigatório',
+        emailValid: 'E-mail deve ser válido',
+        messageRequired: 'Mensagem é obrigatório',
+        messageValid: 'Mensagem deve ter mais de 10 caracteres',
+        subjectRequired: 'Assunto é obrigatório',
+      },
+      labels:{
+        name: 'Nome',
+        email: 'E-mail',
+        subject: 'Assunto',
+        message: 'Mensagem',
+      },
+      buttons: {
+        submit: 'Enviar',
+        reset: 'Apagar',
+      },
+      our_address: {
+        title: 'Nosso Endereço',
+        address: 'Endereço',
+        phone: 'Telefone'
+      },
+      business_hours: {
+        title: 'Horário Comercial',
+        days_hours: 'Segunda – Sexta – 09 às 18 horas'
+      },
+      get_in_touch: {
+        title: 'Entrar em Contato',
+        text: 'Nossa equipe está apta para atender suas solicitações, entre em contato pelo formulário ou telefone ou email ou faça-nos uma visita em nosso endereço.'
+      }
+
+    }
   }
 }
